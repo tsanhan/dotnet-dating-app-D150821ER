@@ -1,6 +1,14 @@
-// 4. module assets and source code
+5. Introduction
 
-1. we'll need some resources to download so we could build this project.
-they are here in the StudentAssets folder
+simply put:
+1. have data in db
+2. API project to fetch the data
+3. angular project to query the API and display it
 
-2. don't worry about it right now, we'll use it when we'll use it
+learning goals:
+1. using dotnet CLI (come with dotnet sdk)
+2. API controllers/endpoints (understand structure)
+3. Entity Framework
+4. API project structure
+5. config and env variables 
+6. source control

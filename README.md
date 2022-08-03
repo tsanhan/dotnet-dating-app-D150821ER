@@ -1,15 +1,15 @@
-so we are going to fetch data from our api
-* add module => go to app.module.ts
-* angular uses DI the way .net core uses it.
-* go to app.component.ts
+adding CORS to our API.
+* ok. so we are currently run our API on 5001 and our client on 4200 - not same origin.
+* we can't fetch data 
+    - unless using JSONP: lean @ home by yourselves
+* this is not allowed unless our API says it's ok via a header
 
-* after running check out the browser to see result
-* no data (it's ok, we didn't interpolate 'users')
-* we DO have errors:
-* we do go to the error part with the printing of the error response
-* but WTF is CORS?
-    - the server tells the browser that it accepts requests only from same origin (url+port)
-    - the browser is the one enforces the policy
-    - https://www.youtube.com/watch?v=4KHiSt0oLJ0
+* go to Startup.cs
 
-next up: adding cors to our API
+* after refreshing the page (if needed then also the BE) the error is gone.
+ - can view the call in Network in DevTools to see the data and the CORS allow header in the Response
+
+
+
+
+

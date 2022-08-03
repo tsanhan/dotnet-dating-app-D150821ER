@@ -31,7 +31,10 @@ export class AppComponent {
       //   console.log('Finished');
       // }
       {
-        next: response => {this.users = response;}, // what to do with returned data
+        next: response => {
+          this.users = response;
+          console.log(response);
+        }, // what to do with returned data
         error: error => {console.log(error);}, // what to do with error
         complete: () => {console.log('Finished');} // what to do when finished
       }

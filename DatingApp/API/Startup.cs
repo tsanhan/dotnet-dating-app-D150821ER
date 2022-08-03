@@ -40,7 +40,7 @@ namespace API
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "API", Version = "v1" });
             });
 
-
+            services.AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +56,13 @@ namespace API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors(policy =>
+            policy
+            .AllowAnyHeader() // allow any header (like authentication related headers)
+            .AllowAnyMethod() // allow any method(HTTP Verb) (like GET, POST, PUT, DELETE)
+            .WithOrigins("http://localhost:4200") // our frontend
+            );
 
             app.UseAuthorization();
 

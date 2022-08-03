@@ -1,10 +1,6 @@
-Section 3: Building a walking skeleton Part Two - Angular
-
-section intro:
-1. complete the working skeleton with the front end client angular app
-2. using angular cli
-3. review angular project files and the angular bootstrap process
-4. using angular HttpClient service to fetch the data
-5. running an angular app over HTTPS protocol
-6. adding external packages via npm
-
+- make sure you have nodejs and npm
+- `node --vertion` and `npm --vertion` to make sure the versions are fine  
+- install angular cli globally: `npm install -g @angular/cli`
+- create new app(lowercase name) inside DatingApp folder `ng new client`
+ * use routing
+ * use css

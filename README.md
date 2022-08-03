@@ -1,11 +1,10 @@
-summery:
-1. used doentet cli to create app, solution file gitignore file 
-2. implemented basic API functionality, controller and endpoints
-3. installed entity framework, get data
-4. project structure
-5. configuration of the variables of our app
-6. source control
+Section 3: Building a walking skeleton Part Two - Angular
 
-next up:
-- setting our angular app to get the data from there
-- 
+section intro:
+1. complete the working skeleton with the front end client angular app
+2. using angular cli
+3. review angular project files and the angular bootstrap process
+4. using angular HttpClient service to fetch the data
+5. running an angular app over HTTPS protocol
+6. adding external packages via npm
+

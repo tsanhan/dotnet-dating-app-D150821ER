@@ -1,10 +1,14 @@
-implement basic authentication
-- go to AppUser.cs
+so we want to create a controller for login/register
+looking @ our UsersController we see that:
+1. all controller wil have [ApiController] and [Route] annotations
+2. ControllerBase inheritance
 
-* in order to make sure our new properties added to the table we need to create a new migration:
 
-* run `dotnet ef migrations add UserPasswordAdded`,
-* lets see what we've done, go to => API/Data/Migrations/[date]UserPasswordAdded.cs
+so for the sake of DRY we'll create BaseApiController.cs (go to file)
+and use it to derive from our UserController
 
-* apply the changes to the BS: run `dotnet ef database update` (prom the print we see the changes to our DB)
-* to make sure: Ctrl+Shift+p => Sqlite:Open Database => select out db => see the users table
+make sure all is fine using postman 
+    * can start using postman collections:
+    * import => select from StudentAssets the postman collection
+
+next up: create account controller for register/login

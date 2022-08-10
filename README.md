@@ -1,31 +1,16 @@
-install bootstrap
+self signed certificate is a mess... 
+what are certificates in the first place?
+I'll provide a certificate, how to make the browser to trust it?
 
-what is it?
-go to https://getbootstrap.com/ => docs => v4.6
+* in StudentAssets/generateTrustedSSL folder we have server crt and key to our angular config
+* instructions inside Instructions.txt
 
-* the css is fine but BS has also have JS functionality
-* on the getting-started => javascript page i't says it uses jQuery
-* what's the problem with jQuery?
-    - angular and jQuery manipulates the DOM
-    - angular has CD to on it's own changes - it's wo't work on JQ changes
+* create folder DatingApp/client/ssl 
+* copy server crt and key to the folder
 
-* so.. we'll use ngx-bootstrap 👍
-* go to https://valor-software.com/ngx-bootstrap => get started
-* we'll use the cool ng add command (it's updating our project with dependencies, make changed to package.json and angular.json among other things)
+* tell angular to use the certs
+* go to angular.json and edit the projects > client > architect > serve > configurations > production + development keys, and add the "sslKey", "sslCert" and "ssl" keys
+* restart the client app
 
-* run `ng add ngx-bootstrap` and watch the console 
-* look at what we added and where
-* what is package.json?
-* what is angular.json
-
-add icon package: we'll use font-awesome
-* search for font-awesome on npm and install it (run `npm i font-awesome`)
-
-* restart our angular app for changes to take effect.
-
-next up: being able to run our angular app in HTTPS mode -for  windows users
-
-
-
-
-
+* in browser, got secure connection, no errors, but also no data... fix this[5 min]
+*  

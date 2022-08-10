@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  // change detection in angular is done by the angular framework.
+  // it checks if the data has changed and if so it rerenders the component.
   title: string = 'The Dating app';
   users: any;
 

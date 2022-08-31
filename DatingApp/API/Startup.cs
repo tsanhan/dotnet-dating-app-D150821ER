@@ -34,12 +34,6 @@ namespace API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            // 3 types of service lifetimes after we start it:
-            // AddSingleton: dies (disposed) with the application (too long for service we need on the api call level)
-            // AddScoped: dies(disposed) with the http request ( in this case its scoped to the request, we create it on http call (injected to the controller), most useful in Web Apps)
-            // AddTransient: dies(disposed) on method finishing, created every time they are injected or requested.
-            
             services.AddApplicationServices(_config);
 
             services.AddControllers();
@@ -49,18 +43,6 @@ namespace API
             });
 
             services.AddCors();
-
-            //before adding our middleware we add a service for the authentication, configure it with jwt configuration:
-            // services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            //     .AddJwtBearer(options =>
-            //     {
-            //         options.TokenValidationParameters = new TokenValidationParameters {
-            //             ValidateIssuerSigningKey = true,
-            //             IssuerSigningKey = new SymmetricSecurityKey(System.Text.Encoding.UTF8.GetBytes(_config["TokenKey"])),
-            //             ValidateIssuer = false,
-            //             ValidateAudience = false
-            //         };
-            //     });
 
             services.AddIdentityServices(_config);
         }
@@ -87,7 +69,7 @@ namespace API
             );
 
             app.UseAuthentication();
-            
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

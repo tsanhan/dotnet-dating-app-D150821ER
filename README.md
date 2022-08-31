@@ -1,10 +1,15 @@
-lest start with some basic refactoring using extension methods.
-this is for DRY and making methods look cleaner and organized 
-And extension methods enable us to add methods to existing types without creating a new derived type
-or modifying the original type.
+summery:
+we learned: 
+1. store passwords in DB, basic authentication
+    * storing password hash is not good enough, there are multiple dictionaries with every common password to hash via different algos (general dictionary attack)
+    * lasting keep up safe from that BUT it's not keep us safe from an attack on a single password, only multiple people using the same password
+2. using inheritance in C# - DRY
+3. using C# debugger
+4. DTOs
+5. Validation
+6. JWTs
+7. using services (single responsibility) in C# 
+8. extension methods - DRY
 
-we'll extend IServiceCollection (from startup.cs) to contain all the services
+next up: login and registration in the FE
 
-create and goto Extensions/ApplicationServiceExtensions - for all application core stuff
-create and goto Extensions/IdentityServiceExtensions - for all identity related stuff
-go to startup.cs

@@ -1,11 +1,6 @@
-conditionals: 
-we want to display the links at the top only if the user is logged in.
-go to nav.component.ts
+dropdown functionality:
+go to the dropdown component in ngx-bootstrap docs and follow instructions:
+go to app.module to apply
+go back to the ngx-bootstrap doc anf explain in the example generally what is a directive (dropdown or dropdownToggle in the doc page)
 
-test the login => logout functionality
-
-we have some issues:
-1. dropdown functionality
-2. soling state on refresh (persisting the login)
-
-next up: dealing with 1.
+go to the nav.component.html

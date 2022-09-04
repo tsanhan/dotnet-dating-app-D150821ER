@@ -1,7 +1,8 @@
-angular services:
+using our service:
+go to nav.component.ts
 
-create services folder and create account service inside.
-services are used usually for business logic and dealing with http requests
-go to account.service.ts
+test it in the client app: it should work
+so now we can conditionally display things based on whether the user is logged in or not
+we can also test if we get 401 if we send the wrong  password or username
 
-next up: use the service in a component to log in 
+up next: conditionals

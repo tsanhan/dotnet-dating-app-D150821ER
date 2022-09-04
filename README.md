@@ -1,8 +1,11 @@
-using our service:
+conditionals: 
+we want to display the links at the top only if the user is logged in.
 go to nav.component.ts
 
-test it in the client app: it should work
-so now we can conditionally display things based on whether the user is logged in or not
-we can also test if we get 401 if we send the wrong  password or username
+test the login => logout functionality
 
-up next: conditionals
+we have some issues:
+1. dropdown functionality
+2. soling state on refresh (persisting the login)
+
+next up: dealing with 1.

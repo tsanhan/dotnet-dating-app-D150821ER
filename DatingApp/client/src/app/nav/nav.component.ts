@@ -28,4 +28,9 @@ export class NavComponent implements OnInit {
         });
   }
 
+  // create a logout method (we'll sure deal with login/logout differently )
+  logout() {
+    this.loggedIn = false;
+  }
+
 }

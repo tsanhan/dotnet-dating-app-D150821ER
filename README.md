@@ -1,6 +1,28 @@
-dropdown functionality:
-go to the dropdown component in ngx-bootstrap docs and follow instructions:
-go to app.module to apply
-go back to the ngx-bootstrap doc anf explain in the example generally what is a directive (dropdown or dropdownToggle in the doc page)
+observable (persisting the login is up next):
+explain observable:
+1. a new standard for managing async data
+2. introduced in angular 2
+3. they are lazy collection of multiple values over time
+4. think of it as a newsletter
+    * only subscribers receive the newsletter 
+    * if there are no subscribers, there is no print
 
-go to the nav.component.html
+    promises        vs      observable:
+-----------------------------------------------
+1.  single future           multiple values
+    value                   over time 
+
+2.  not lazy                lazy
+
+3.  can not cancel          able to cancel
+
+4.  not part of an          can be used with  
+    ecosystem               operators (pure functions)
+                            like map/filter/reduce/etc 
+                            using rxjs (external library- part of angular)
+                            and pipe
+
+5.  2 events:               3 events:
+    response or reject      next, error, complete
+
+up next: we'll be creating our own observable to persist the login;

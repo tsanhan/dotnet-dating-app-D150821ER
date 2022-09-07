@@ -16,9 +16,7 @@ export class NavComponent implements OnInit {
     this.currentUser$ = this.accountService.currentUser$;
   }
 
-  ngOnInit(): void {
-    // this.getCurrentUser();
-  }
+  ngOnInit(): void {}
 
   login() {
     this.accountService.login(this.model) // returning observable (it's lazy)

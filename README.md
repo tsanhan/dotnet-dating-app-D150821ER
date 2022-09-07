@@ -1,9 +1,8 @@
-adding a home page for a user to register:
-inside `app` folder run `ng g c home --skip-tests`
+add a registration form
 
-we'll create a basic component style and functionality
-go to home.component.html/ts
+create and go to the registration form (`ng g c register --skip-tests`) in `app` folder
+and start with register.component.ts
 
-remove from app.component.html the odd list of users and insert use home component
+up next: parent-child components communication
 
-next up: add a registration form
+

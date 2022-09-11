@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { AccountService } from '../services/account.service';
 import { User } from '../models/user';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-nav',
@@ -15,7 +16,8 @@ export class NavComponent implements OnInit {
 
   constructor(
     private accountService: AccountService,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService
     ) {
     this.currentUser$ = this.accountService.currentUser$;
   }
@@ -30,6 +32,7 @@ export class NavComponent implements OnInit {
           console.log(response);
         },
         error: error => {
+          this.toastr.error(error.error);
           console.log(error);
         }
 

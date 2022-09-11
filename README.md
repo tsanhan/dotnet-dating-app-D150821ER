@@ -1,8 +1,8 @@
-let's review what we learned in this section:
-1. implemented the register functionality.
-2. creating components
-3. forms => two way binding
-4. angular services for sharing data => singletons in their provided scope
-5. observables, async pipes for subscribing/unsubscribing to observables
-6. structural directives => conditionally rendering elements 
-7. parent child communication => Input/Output
+Section 6: angular routing:
+* angular is an SPA, we have only one page (index.html)
+* we need a way to navigate between different components
+1. implement routing in our app
+2. understand routing
+3. adding a bootstrap theme
+4. using route guards (prevent access to components -not a real security thing)
+5. using a shared model

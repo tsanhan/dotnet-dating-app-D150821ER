@@ -18,11 +18,11 @@ export class NavComponent implements OnInit {
     private accountService: AccountService,
     private router: Router,
     private toastr: ToastrService
-    ) {
+  ) {
     this.currentUser$ = this.accountService.currentUser$;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   login() {
     this.accountService.login(this.model) // returning observable (it's lazy)
@@ -31,11 +31,17 @@ export class NavComponent implements OnInit {
           this.router.navigateByUrl('/members');
           console.log(response);
         },
-        error: error => {
-          this.toastr.error(error.error);
+        error: ({ error }) => {
+          if (!(error.errors && typeof error.errors === 'object')) {
+            return this.toastr.error(error) as any;
+          }
+          for (const key in error.errors) {
+            if (error.errors.hasOwnProperty(key)) {
+              this.toastr.error(error.errors[key]);
+            }
+          }
           console.log(error);
         }
-
       });
   }
 

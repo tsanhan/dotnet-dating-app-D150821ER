@@ -1,8 +1,13 @@
-applying a bootstrap theme:
-1. go to bootswatch.com and pick a theme
-2. install `bootswatch` (https://www.npmjs.com/package/bootswatch)
-3. in angular.json apply the stylesheets AFTER bootstrap's, go to angular.json 
-4. restart the angular app
+exporting to a shared module:
+the app.module.ts can become really large, lets see what we can do about it.
 
-* lets make the top navbar a bit brighter and also display the username, go to nav.component.html
- next up: exporting to a shared module so the app module will be thinner
+- we'll create a core module (for the basic stuff)
+- we'll create a feature module (for feature related stuff)
+    * we want to enable lazy loading (we download the code only when needed)
+
+
+* create modules folder
+* create a 'members' module there
+* create a 'core' module there
+* go to core.module.ts:
+* go to members.module.ts:

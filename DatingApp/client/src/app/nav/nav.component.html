@@ -3,17 +3,18 @@
 
     <a class="navbar-brand" routerLink="/">Dating App 📅 </a>
 
-    <ul *ngIf="currentUser$ | async" class="navbar-nav mr-auto">
-      <li class="nav-item ">
-        <a class="nav-link" routerLinkActive="active" routerLink="/members">Matches</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="/lists">Lists</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" routerLinkActive="active" routerLink="/messages">Messages</a>
-      </li>
-
+    <ul class="navbar-nav mr-auto">
+      <ng-container *ngIf="currentUser$ | async">
+        <li class="nav-item ">
+          <a class="nav-link" routerLinkActive="active" routerLink="/members">Matches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/lists">Lists</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="/messages">Messages</a>
+        </li>
+      </ng-container>
     </ul>
 
     <div class="dropdown" *ngIf="currentUser$ | async" dropdown>

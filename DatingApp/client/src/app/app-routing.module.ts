@@ -14,24 +14,15 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'members', // localhost:4200/members
-    component: MemberListComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'members/:id', // localhost:4200/members/1
-    component: MemberDetailComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'lists',
-    component: ListsComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'messages',
-    component: MessagesComponent,
-    canActivate: [AuthGuard]
+    path: '',
+    canActivate: [AuthGuard],
+    runGuardsAndResolvers: 'always',
+    children: [
+      {path:'members',component: MemberListComponent},
+      {path:'members/:id',component: MemberDetailComponent},
+      {path:'lists',component: ListsComponent},
+      {path:'messages', component: MessagesComponent}
+    ]
   },
   {
     path: '**', // localhost:4200/anything

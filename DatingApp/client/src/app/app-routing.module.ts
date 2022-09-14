@@ -18,8 +18,10 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     runGuardsAndResolvers: 'always',
     children: [
-      {path:'members',component: MemberListComponent},
-      {path:'members/:id',component: MemberDetailComponent},
+      {
+        path: 'members', // localhost:4200/members
+        loadChildren: () => import('./modules/members.module').then(mod => mod.MembersModule)
+      },
       {path:'lists',component: ListsComponent},
       {path:'messages', component: MessagesComponent}
     ]

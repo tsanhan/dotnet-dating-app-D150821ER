@@ -1,15 +1,9 @@
-building global exception handling middleware:
-
-the goal of this middleware is to catch all exceptions and return a response in standard way.
-create an `Errors` folder and ApiException.cs file in it.
-go to ApiException.cs;
+ok so now that we saw different responses in the postman, 
+we can see see that in the client side.
 
 
-create an `Middleware` folder and ExceptionMiddleware.cs file in it.
-this will be our middleware class.
-lets see how we build a middleware in .net core.
-do to ExceptionMiddleware.cs
+create a folder called `errors` and comportment `test-errors` inside it.
+this component will test some errors for the global error handling feature we'll have in angular.
+go to test-errors.component.ts
 
-use the middleware in Startup.cs, go to Startup.cs
-
-
+run the client app and tent in /errors

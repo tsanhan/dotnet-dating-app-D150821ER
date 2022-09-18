@@ -1,7 +1,7 @@
-we'll start with setting up a controller to take a look at errors in terms of exceptions and error handling
+handling server errors:
 
-create and go to API/Controllers/BuggyController.cs
+1. lets start with the server error handling
+    * what captures the exception (what we see in the response in postman) is the developerExceptionPage
+2. go to startup.cs
 
-test in postman - section 7 to see all the errors coming back
-
-next up: handling server errors
+up next: building global exception handling middleware

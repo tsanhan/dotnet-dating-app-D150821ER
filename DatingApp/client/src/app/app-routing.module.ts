@@ -22,8 +22,8 @@ const routes: Routes = [
         path: 'members', // localhost:4200/members
         loadChildren: () => import('./modules/members.module').then(mod => mod.MembersModule)
       },
-      {path:'lists',component: ListsComponent},
-      {path:'messages', component: MessagesComponent}
+      { path: 'lists', component: ListsComponent },
+      { path: 'messages', component: MessagesComponent }
     ]
   },
   {

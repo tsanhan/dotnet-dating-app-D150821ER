@@ -1,13 +1,8 @@
-exporting to a shared module:
-the app.module.ts can become really large, lets see what we can do about it.
+73. Section 6 summary
 
-- we'll create a core module (for the basic stuff)
-- we'll create a feature module (for feature related stuff)
-    * we want to enable lazy loading (we download the code only when needed)
+1. router basics
+2. added bootstrap theme
+3. route guards (not a security, security is on the BE, FE have all the code)
+4. feature + shared modules (can talk about core module - things that are used in all the app) 
 
-
-* create modules folder
-* create a 'members' module there
-* create a 'core' module there
-* go to core.module.ts:
-* go to members.module.ts:
+next module: error handling on the FE + BE

@@ -42,7 +42,7 @@ export class ErrorInterceptor implements HttpInterceptor {
             }
             break;
           case 401: // if there is a 401 error
-            this.toastr.error(err.statusText === 'OK' ? 'Unauthorised' : err.statusText, err.status);
+            this.toastr.error(err.statusText === 'OK' ? err.error || 'Unauthorised' : err.statusText, err.status);
             break;
           case 404: // if there is a 404 error
             this.router.navigateByUrl('/not-found');

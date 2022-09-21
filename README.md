@@ -1,4 +1,11 @@
-displaying the server validation errors:
+handling not-found
 
-we'll introduce client side validation later.
-go to test-errors.component.ts
+lets create the page
+create `not-found` component in `errors` folder
+and go to not-found.component.html
+
+one other thing, when entering wrong login data, we get 2 errors
+go to nav.component.ts to handle it
+test with username and password not existing to get 401
+
+up next: adding server error page

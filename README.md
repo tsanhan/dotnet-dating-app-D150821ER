@@ -1,11 +1,15 @@
-adding server error page
+section 7 summery:
+we learned:
+1. implemented global error handling both in the frontend and backend   
+    * on the side of the API we just created a class to represent the exception
+    * we return this class using a middleware we created
+    * we didn't want to rely on the provided developer exception middleware
 
-lets create the page
-1. create `server-error` component in `errors` folder
-2. add the component to te route (app-routing.module.ts )
+2. angular interceptors 
+3. troubleshoot exceptions 😉
+4. create a helper page for the frontend
+    * and I encourage you to solve errors you made, and you probably will
+    * if you do that you:1. learn a lot in the process 2. get a nice feeling that you can solve errors, 3. this is part of the job
 
-*   now, because our handling in the interceptor was a bit different(adding navigationExtras)
-    we want to get this information in the component when it loads
-    go to server-error.component.ts 
-
-* normally we would not want to have error component to show our server's stack trace, something more professional should be there (can manage this if querying on what environment we are in)
+up next: we have all the core stuff we need to start adding feature after feature
+so in the next section we are going to start expanding our api

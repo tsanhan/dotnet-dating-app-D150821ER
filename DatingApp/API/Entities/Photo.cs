@@ -11,5 +11,10 @@ namespace API.Entities
         public string Url { get; set; }
         public bool IsMain { get; set; }
         public string PublicId { get; set; }
+
+
+        //  this is 'fully defining' a relationship
+        public AppUser AppUser { get; set; }
+        public int AppUserId { get; set; }
     }
 }

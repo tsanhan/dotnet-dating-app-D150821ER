@@ -1,11 +1,45 @@
-Section 9 Introduction:
-in this section, we going to implement the components that make up the UI.
+Using TypeScript:
+so far we have used ts as js and used 'any' as type there we needed.
 
-learning goals:
-1. using typescript types: the best thing that happened to JS (as a dynamically typed language)
-2. using the async pipe
-3. using bootstrap for styling
-4. basic css tricks to enhance the UI
-5. using a 3rd party photo gallery
+in brief:
+ts gives us intellisense/autocomplete fir the types we have defined and used.
 
-all this so our app will start to look like something functional.
+//1. will work on js, not ts
+let a = 1;
+// a = "s";
+
+let b: string | number = 1;
+b = "s";
+
+const car1 = {
+  color: 'red',
+  model: 'bmw'
+}
+
+const car2 = {
+  color: 'blue',
+  model: 'kia',
+  topSpeed: 100
+}
+
+interface Car {
+  color: string | number;
+  model: string;
+  topSpeed?: number;
+}
+
+const car3: Car = {
+  color: 'red',
+  model: 'bmw'
+}
+
+const car4: Car = {
+  color: 3,
+  model: 'kia',
+  topSpeed: 100
+}
+
+
+//2. function
+const multiply: (x: number, y: number) => number = (x: number, y: number): number => x * y;
+

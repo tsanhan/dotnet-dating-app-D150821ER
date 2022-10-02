@@ -1,6 +1,10 @@
-Adding a DTO for Members:
-    create and go to DTOs/MemberDto.cs
-    so what we need to return is a list of MemberDto in UsersController.cs
-    we can do that in different ways, we'll use a Utility calls AutoMapper
+adding AutoMapper:
+* AutoMapper help up map one object to another
+ 
+1. adding AutoMapper form nuget gallery
+    * we want the ine we can use with DI, 
+      so install `AutoMapper.Extensions.Microsoft.DependencyInjection` package
+2. create a folder and go to file Helpers/AutoMapperProfiles.cs
+3. add this to our DI so go to ApplicationServiceExtensions.cs
 
-up next: adding AutoMapper to our project
+up next: using AutoMapper to map objects

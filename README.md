@@ -1,23 +1,12 @@
-Using AutoMapper queryable extensions:
-    well all is good and we returning the data.
-    it also wasn't so hard to do...
-    so... are we doing the right thing here?
-    some say if it's easy it's not optimal... we can argue...
-    there is a saying in Computer Science:
-        "Premature Optimization is the root of all evil"
-    it's all talk but one thing is for sure you can defiantly optimize if it's some quick stuff and the code stay clean and understandable.
+Section 8 summary:
+what we have learned:
+1. EF Relationship: understand the one to many relationship
+2. EF Conventions: fully define relationship (photo being added it added to a user)
+3. Seeding Data into the Database: the lazy way
+4. The Repository Pattern: a bit more architecture (some will argue that's not necessary, but when it comes to testing it's a good idea)
+5. Using AutoMapper: 
+    * configure AutoMapper and using the queryable extensions to use projection from our repository into our DTOs, 
+    * so we don't handle the mapping in the controller, but in the repository
+    * as it's one of it's jobs too, to get the data from the DB and return it in a presentable format TO the controller
 
-    if we take a look at UserRepository.cs @ GetUserByUserNameAsync method, we getting an entity (lot's of fields we might no need) and from memory (in the BE) we convert it to a DTO, can be a subset of these fields.
-
-    we can say that we better select our properties and let the DB return us the DTO itself, and not an entity, let the DB do the mapping and the conversion to DTO.
-    
-    but we will still will need to do the mapping and we don't want to, it's lots of work 😅
-
-    lets see what we CAN do.
-    go to IUserRepository.cs
-
-ok so we managed to create a query of specific properties, and make our query more efficient.
-
-thats not all the efficiency we can get but it's fine for now
-
-notice in UserRepository.cs @ GetUserByUserNameAsync we don't need the .Include(x => x.Photos) anymore. with the help of AutoMapper, EF will figure out it need to join the table and build the query needed when we use Projection .
+up next: start building our UI

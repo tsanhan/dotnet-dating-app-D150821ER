@@ -1,21 +1,14 @@
-using AutoMapper to map objects:
-    * after install lets use it:
-    go to UsersController.cs
+Configuring AutoMapper:
 
-    now we didn't tell our mapper how to map our objects.
-    * from the looks on objects[side by side, MemberDto & AppUser], AutoMapper can map properties of the same name, thats easy.
-    even if they have different case (lower/upper).
-    
-    * I want to use Username instead of UserName, (change it in MemberDto.cs [only comment 1])
-    
-    * about the Age, AutoMapper uses GetAge() to get the age of the user (convention over configuration - methods with 'Get' retuning int, will be used to populate to right property with the right type)
-    
-    * now I want to give the mapper a challenge, I want a property named PhotoUrl to be the first photo in the collection of photos (go to MemberDto.cs [only comment 2])
+    go to AutoMapperProfiles.cs
+    test this in postman - works like a charm!
 
-    * lets test this in postman, section 8 get all users, and see if it works.
-        * ok so good and bad news: the AutoMapper works, we got even the photos, but not the PhotoUrl.
+    it's all very convenient to use all time up in this way, but when something's really lazy, as a developer, you sometimes need to ask yourself, is this optimal?
 
-up next configure AutoMapper to map the PhotoUrl property
+    And that's a really good question.
 
+    is this the optimal way of returning and fetching data from our repository? hmmm...
 
-    
+    Well, let's take a look at our options in the next lesson.
+
+up next: Using AutoMapper queryable extensions

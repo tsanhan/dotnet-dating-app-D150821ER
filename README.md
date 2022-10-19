@@ -1,12 +1,13 @@
-populating the right hand side:
-* we'll use ngx-bootstrap's tabs module (https://valor-software.com/ngx-bootstrap/#/tabs)
-* can look at the doc in the link above.
-* go to shared.module.ts
-* go to MembersModule to add the shared module
-* add the tabs to the component, go to member-detail.component.html
+Adding a photo gallery:
+* install and use https://www.npmjs.com/package/@kolkov/ngx-gallery
+  * can watch the demo
+  * can follow the md file to see how to use it
 
-because tabs is a an encapsulated component, we can effect the inner style using the global style.css
-(other way can be played with, like ::ng-deep) 
-* copy from StudentAssets/snippets/member-tabs-css.txt, and paste to styles.css
+* add the module to members (go to members.module.ts)
+* implement in the member-detail.component.ts
 
-up next: Adding a photo gallery
+* in case there is no photo, we are using a default image
+* copy the image file user.png from StudentAssets and past it in the assets folder
+
+so we did it for the member detail component, not the member card component.
+* go to member-card.component.html

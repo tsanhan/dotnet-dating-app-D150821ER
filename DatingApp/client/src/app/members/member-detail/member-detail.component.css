@@ -18,3 +18,8 @@
 ::ng-deep span {
   font-size: larger;
 }
+
+.ngx-gallery{
+  display: inline-block;
+  margin-bottom: 20px;
+}

@@ -1,13 +1,9 @@
-Adding a photo gallery:
-* install and use https://www.npmjs.com/package/@kolkov/ngx-gallery
-  * can watch the demo
-  * can follow the md file to see how to use it
+Section 9 summary:
+we learned:
+1. we now using TS more
+2. added another interceptor, it will take care for sending the token for us
+3. added a bit of styling using some css and bootstrap
+4. used a 3rd party photo gallery
+5. used route params
 
-* add the module to members (go to members.module.ts)
-* implement in the member-detail.component.ts
-
-* in case there is no photo, we are using a default image
-* copy the image file user.png from StudentAssets and past it in the assets folder
-
-so we did it for the member detail component, not the member card component.
-* go to member-card.component.html
+up next: giving the user the ability update their profile.

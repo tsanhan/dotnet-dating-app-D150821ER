@@ -13,3 +13,8 @@
   background-color: #fff;
   border-top: none;
 }
+
+/*::ng-deep will break thou the encapsulation and effect nested components */
+::ng-deep span {
+  font-size: larger;
+}

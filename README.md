@@ -1,7 +1,2 @@
-adding some styling to the cards:
-
-zoom a bit on hover.
-go to member-card.component.css
-
-up next: Adding animated buttons
-
+Adding animated buttons:
+we need button interaction: view profile, like and messages

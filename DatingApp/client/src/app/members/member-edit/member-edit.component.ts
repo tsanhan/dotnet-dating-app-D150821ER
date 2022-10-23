@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { take } from 'rxjs/operators';
 import { Member } from 'src/app/models/member';
 import { User } from 'src/app/models/user';
@@ -14,9 +16,12 @@ export class MemberEditComponent implements OnInit {
   member: Member;
   user: User;
 
+  @ViewChild('editForm') EForm: NgForm;
+
   constructor(
     private accountService: AccountService,
-    private memberService: MembersService
+    private memberService: MembersService,
+    private toastr: ToastrService
   ) {
     this.accountService.currentUser$.pipe(take(1)).subscribe(user => this.user = user);
   }
@@ -29,5 +34,14 @@ export class MemberEditComponent implements OnInit {
     this.memberService.getMember(this.user.username).subscribe(member => {
       this.member = member;
     })
+  }
+
+  updateMember() {
+    console.log(this.member);
+    this.toastr.success('Profile updated successfully');
+
+    this.EForm.reset(this.member);
+    console.log(this.EForm);
+
   }
 }

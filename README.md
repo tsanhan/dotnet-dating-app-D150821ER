@@ -1,9 +1,7 @@
-create the edit form:
+making the form function:
+go to member-edit.component.html
 
-* we'll start with copying the form member-detail.component.html to member-edit.component.html
-* and the same for the css
-* after the copy, go to member-edit.component.html to edit it a bit
+what if the user is typing for a while and suddenly navigating away from the page, the information will be lost
+let see how we can prevent this:
 
-up next: making the form function (the info above be displayed when needed and after the save button was clicked)
-
-
+up next: adding can deactivate guard

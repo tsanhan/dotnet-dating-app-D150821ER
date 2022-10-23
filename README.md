@@ -1,9 +1,10 @@
-Section 9 summary:
-we learned:
-1. we now using TS more
-2. added another interceptor, it will take care for sending the token for us
-3. added a bit of styling using some css and bootstrap
-4. used a 3rd party photo gallery
-5. used route params
+Introduction:
+goals:
+1. update their profile
+2. angular template forms
+3. the CanDeactivate route guard - if something changes, ask if they want to leave
+4. the @ViewChild decorator - access elements in our template
+5. adding loading indicators to the client app - right now everything is loading instantly - this is not realistic in the real world
+6. caching the data in Angular services
 
-up next: giving the user the ability update their profile.
+up next: Creating a member edit component

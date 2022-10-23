@@ -1,10 +1,10 @@
-Introduction:
-goals:
-1. update their profile
-2. angular template forms
-3. the CanDeactivate route guard - if something changes, ask if they want to leave
-4. the @ViewChild decorator - access elements in our template
-5. adding loading indicators to the client app - right now everything is loading instantly - this is not realistic in the real world
-6. caching the data in Angular services
+Creating a member edit component:
 
-up next: Creating a member edit component
+* create a new component named "member-edit" in members
+* give this component a route, go to app-routing.module.ts
+* add a link to this in nav.component.html  (go to)
+* make sure we load the right data, go to member-edit.component.ts 
+
+* test the result
+
+* up next: create the edit form

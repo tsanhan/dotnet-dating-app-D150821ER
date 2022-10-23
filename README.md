@@ -1,10 +1,9 @@
-Creating a member edit component:
+create the edit form:
 
-* create a new component named "member-edit" in members
-* give this component a route, go to app-routing.module.ts
-* add a link to this in nav.component.html  (go to)
-* make sure we load the right data, go to member-edit.component.ts 
+* we'll start with copying the form member-detail.component.html to member-edit.component.html
+* and the same for the css
+* after the copy, go to member-edit.component.html to edit it a bit
 
-* test the result
+up next: making the form function (the info above be displayed when needed and after the save button was clicked)
 
-* up next: create the edit form
+

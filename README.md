@@ -1,49 +1,27 @@
-Introduction:
-we will learn and understand:
-1. photo storage options: there are different options like : local, BE, and cloud storage
-2. adding related entities to a photo: these entities are related to a user
-3. using 3rd party API: this will help us with our photo storage need.
-4. using the debugger, again, because the logic here will need a closer look 
-5. updating and deleting resources
-6. what to return from a 'create' operation in a REST based API
-    * REST: representational state transfer, a way to transfer data between clients and servers, it's a architectural style that uses HTTP verbs to communicate with the server and clients.
-    * HTTP: Hypertext Transfer Protocol, a protocol that allows you to send and receive data over the internet.
-    * verbs: GET, POST, PUT, DELETE, PATCH, OPTIONS
-    * at the end REST is a set of restrains (conventions) over how we use client - server communication 
-    * so we will learn and implement REST in our API (REST service)
+Cloudinary Account:
+so lets see what we can so with Cloudinary:
+1. lets go to the pricing: https://cloudinary.com/pricing
+    * got free tier for free
+    * no credit card required
+    * lots of storage, logic and infrastructure ready to use
+2. sign up for free: https://cloudinary.com/users/register/free
+3. after mail verification, go to the cloudinary dashboard in https://cloudinary.com/console (top left menu option)
+4. the most important thing here is the key and secret.
+5. one of the things cloudinary give ues a SDK to work with from our BE
+    * SDK: software development kit, a set of tools that helps us to work with cloudinary
 
-* ok, so our choices for photo storage:
-    1. DB: as binary large objects (BLOB) ❌
-        * - not efficient,
-        * + but easy to use
-        * - takes up a lot space: not good when we deploy our app and need to pay for that space
-        * - we need to pay for the space, storage, bandwidth, etc.
+6. we can find the SDK in the documentation ('?' icon in the top right corner), OR https://cloudinary.com/documentation
 
-    2. local file system:                 ❌
-        * + are efficient, easy to use and cheep. file systems are optimized for storing binary data
-        * - local file system storage (or cloud based file system) is not infinite.
-        * - one other thing to worry about and write logic for this server (like aspect ratio, etc.)
-  
-    3. cloud service:                     ✔️
-        * + no disadvantage as to space, logic written, etc.
-        * ~ basic plan is free, will cost more if we use lots of storage (pay as u go)
-        * + using service's logic for the aspect ratio calculation ( we'll use only squares )
+7. in the documentation, we can find the SDK in the top nav option: 'SDKs'=>'Backend SDKs'=>'.NET SDK' (https://cloudinary.com/documentation/dotnet_integration)
+    * question: why not just use Angular SDK?
+    * answer: we want only authenticated users to upload images, our BE is authenticating the user, the frontend is not
+8. after the examples we have the 'installation' (using nuget)
+    * and then the configurations (we'll need the key + secret + cloud_name there)
+    * and then 'Related topics' section with 'uploading images and videos' 
+    * there, we won't need the widget, we have angular for that, but the '.NET image upload' is relevant
+    * we'll need to pass params that related to the file.
+    * as a response (in section 'Upload response') we'll get the url of the image (in secure_url)
 
-* ok so we'll be using Cloudinary(https://cloudinary.com/) for our photo storage.
-* they have free tier of 10gb free storage.
-* they provide a method to be used in our BE to upload photos to their service.
+9. ok so we have plenty of documentation 
 
-* so the process will be:
-1. upload photo to BE with JWT
-2. server upload photo securely to cloudinary (we'll see how to do this)
-3. cloudinary stores the photo and send response
-4. server save photo url & public Id to DB
-5. saved in DB and given outo generated ID
-6. 201 Created Response sent to client with the object that was created and a 'location' header (the location of the resource photo (the url)), by spec https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/201
-
-     client     BE     cloudinary
-            1 ➡️    2 ➡️
-            ⬅️ 6    ⬅️ 3           
-              ⬆️  4        
-              5  ⬇️
-               DB
+up next: Configuring cloudinary in the API

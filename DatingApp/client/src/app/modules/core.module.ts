@@ -6,10 +6,7 @@ import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   imports: [
     CommonModule,
-    BsDropdownModule.forRoot(),
-    ToastrModule.forRoot({
-      positionClass: 'toast-bottom-right'
-    })
+
   ],
   declarations: [],
   exports: [

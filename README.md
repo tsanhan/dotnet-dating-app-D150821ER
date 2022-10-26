@@ -1,7 +1,7 @@
-Configuring cloudinary in the API:
-1. install CloudinaryDotNet from nuget
-2. setting up the configuration, go to appsettings.json (we should not store appsettings.json in github)
-3. I want to make class out of these configurations, so create and go to Helpers/CloudinarySettings.cs
-4. in order to strongly type a configuration, we need to configure it. go to ApplicationServiceExtensions.cs
+Adding a photo service:
+* this service will have the single responsibility to manage the photo uploads/deletion
+* when we create a service we first create an interface for it.
+* create and go to interfaces/IPhotoService.cs
+* create and go to Services/PhotoService.cs
 
-up next: creating a service to work with cloudinary, uploading a and deleting
+up next: using the service in the users controller.

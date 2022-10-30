@@ -19,7 +19,6 @@ import { TestErrorsComponent } from './errors/test-errors/test-errors.component'
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { JwtInterceptor } from './interceptors/jwt.interceptor';
-import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { SharedModule } from './modules/shared.module';
 import { LoadingInterceptor } from './interceptors/loading.interceptor';
 
@@ -34,7 +33,7 @@ import { LoadingInterceptor } from './interceptors/loading.interceptor';
     TestErrorsComponent,
     NotFoundComponent,
     ServerErrorComponent,
-    MemberEditComponent
+
   ],
   imports: [
     BrowserModule,

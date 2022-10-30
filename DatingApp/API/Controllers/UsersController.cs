@@ -78,7 +78,6 @@ namespace API.Controllers
                 PublicId = result.PublicId
             };
 
-
             photo.IsMain = user.Photos.Count == 0;
 
             user.Photos.Add(photo);
@@ -92,3 +91,6 @@ namespace API.Controllers
         }
     }
 }
+
+
+

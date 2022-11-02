@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
 using API.Data;
@@ -48,7 +49,11 @@ namespace API.Controllers
         {
 
             // get user from db
-            var user = await this._context.Users.SingleOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());
+            var user = 
+                await this._context.Users
+                .Include(p => p.Photos)
+                .SingleOrDefaultAsync(x => x.UserName == loginDto.Username.ToLower());
+
             if (user == null) return Unauthorized("Invalid username or password");
 
             // check password... so using hmac todo the reverse of what we did to register
@@ -64,7 +69,8 @@ namespace API.Controllers
 
             return new UserDto {
                 Username = user.UserName,
-                Token = _tokenService.CreateToken(user)
+                Token = _tokenService.CreateToken(user),
+                PhotoUrl = user.Photos.FirstOrDefault(x => x.IsMain)?.Url
             };
         }
         

@@ -1,4 +1,8 @@
-Adding a photo uploader part two.
-go to photo-editor.component.html to adjust the template to our needs
+Setting the main photo in the API:
+this is a functionality provided at the edit photos  section in the edit profile.
 
-up next: other functionalities like mark a photo as the main photo, and delete a photo.
+we'll start in the API.
+go to UsersController.cs
+
+
+up next: setting this on the client side.
